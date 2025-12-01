@@ -8,3 +8,7 @@ import joblib
 # Generate synthetic lifestyle dataset
 np.random.seed(42)
 samples = 500
+
+# Generate synthetic lifestyle dataset
+np.random.seed(42)
+samples = 500
