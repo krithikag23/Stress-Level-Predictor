@@ -20,3 +20,12 @@ data = pd.DataFrame({
     "steps": np.random.randint(1000, 15000, samples),
     "mood": np.random.randint(1, 6, samples),  # 1:bad → 5:great
 })
+
+# Stress label generation formula
+data["stress_level"] = (
+    (data["sleep_hours"] < 6).astype(int)
+    + (data["water_glasses"] < 5).astype(int)
+    + (data["screen_time"] > 6).astype(int)
+    + (data["steps"] < 5000).astype(int)
+    + (data["mood"] < 3).astype(int)
+)
