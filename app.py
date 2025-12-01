@@ -19,3 +19,27 @@ water = st.slider("Water Intake (glasses)", 1, 12, 6)
 screen = st.slider("Screen Time (hours)", 1.0, 12.0, 6.0)
 steps = st.slider("Steps Walked", 1000, 20000, 7000, step=500)
 mood = st.select_slider("Mood", options=[1,2,3,4,5], value=3)
+
+if st.button("🔍 Predict Stress Level"):
+    x = np.array([[sleep, water, screen, steps, mood]])
+    pred = model.predict(x)[0]
+
+    st.success(f"Your predicted stress level is: **{pred}**")
+
+    # 🎯 Tips
+    if pred == "Low":
+        st.info("✨ Keep it up! Your habits are well-balanced.")
+    elif pred == "Medium":
+        st.warning("🙂 Some improvement needed. Try: more sleep + steps + hydration.")
+    else:
+        st.error("🚨 High Stress! Add relaxation, limit screen time, and hydrate more!")
+
+    # Radar chart visualization
+    df_radar = pd.DataFrame({
+        "Feature": feature_names,
+        "Value": [sleep, water, screen, steps, mood]
+    })
+
+    fig = px.line_polar(df_radar, r="Value", theta="Feature", line_close=True,
+                        title="Your Lifestyle Balance Chart")
+    st.plotly_chart(fig, use_container_width=True)
