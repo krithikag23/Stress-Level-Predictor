@@ -35,3 +35,23 @@ data["stress_level"] = pd.cut(
     bins=[-1, 1, 3, 5],
     labels=["Low", "Medium", "High"]
 )
+
+X = data.drop("stress_level", axis=1)
+y = data["stress_level"]
+
+# Train-test split
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+
+model = RandomForestClassifier(n_estimators=200, random_state=42)
+model.fit(X_train, y_train)
+
+# Evaluate
+preds = model.predict(X_test)
+acc = accuracy_score(y_test, preds)
+print("Model Accuracy:", round(acc * 100, 2), "%")
+
+# Save model & columns
+joblib.dump(model, "stress_model.pkl")
+joblib.dump(list(X.columns), "features.pkl")
+
+print("Model saved as stress_model.pkl")
