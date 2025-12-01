@@ -1,2 +1,2 @@
-# Stress Level Predictor
+# 🧠 Stress Level Predictor – AI Wellness Assistant
 
