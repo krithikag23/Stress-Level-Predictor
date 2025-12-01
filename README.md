@@ -15,5 +15,18 @@ Built with **Streamlit**, **Scikit-Learn**, **Plotly** and completely **offline*
 ✔ Perfect for personal wellness tracking 🚀
 
 ---
+## 📌 Inputs Used for Prediction
+
+| Factor | Range |
+|--------|------|
+| 😴 Sleep Hours | 4 – 10 hr |
+| 💧 Water Intake | 1 – 12 glasses |
+| 📱 Screen Time | 1 – 12 hr |
+| 🚶 Steps Walked | 1,000 – 20,000 |
+| 🙂 Mood Scale | 1 (Sad) → 5 (Happy) |
+
+The ML model analyzes these to estimate stress level.
+
+---
 
 
