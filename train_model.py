@@ -29,3 +29,9 @@ data["stress_level"] = (
     + (data["steps"] < 5000).astype(int)
     + (data["mood"] < 3).astype(int)
 )
+
+data["stress_level"] = pd.cut(
+    data["stress_level"],
+    bins=[-1, 1, 3, 5],
+    labels=["Low", "Medium", "High"]
+)
