@@ -28,5 +28,14 @@ Built with **Streamlit**, **Scikit-Learn**, **Plotly** and completely **offline*
 The ML model analyzes these to estimate stress level.
 
 ---
+## 🧠 ML Model Details
 
+| Item | Value |
+|------|------|
+| Dataset | 500 synthetic lifestyle samples |
+| Algorithm | Random Forest Classifier |
+| Accuracy | ~90%+ ✔ |
+| Predictions | Low / Medium / High stress |
+
+Model + feature names saved as:
 
