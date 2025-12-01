@@ -5,3 +5,15 @@ Built with **Streamlit**, **Scikit-Learn**, **Plotly** and completely **offline*
 
 ---
 
+## ✨ Features
+
+✔ Predict stress level: Low / Medium / High  
+✔ Lifestyle Radar Chart to visualize habits  
+✔ Personalized stress-reduction tips  
+✔ Fully offline ML prediction (no internet needed)  
+✔ Clean, responsive UI  
+✔ Perfect for personal wellness tracking 🚀
+
+---
+
+
